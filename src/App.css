@@ -1,10 +1,12 @@
 .container{
   max-width: 1080px;
   margin:20px auto;
+  
 }
 .heading{
   justify-content: center;
   text-align: center;
-  
-  color:beige;
+  font-weight: 900;
+  font-size: 50px;
+  color:rgb(41, 40, 40);
 }

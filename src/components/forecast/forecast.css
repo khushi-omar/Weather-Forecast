@@ -1,55 +1,124 @@
-.title{
-    font-size: 23px;
-    font-weight: 700;
-}
-.daily-item{
-    background-color: rgb(160, 160, 160);
-    border-radius: 10px;
-    height: 40px;
-    margin: 5px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 5px 20px;
-}
-.icon-small{
-    width:40px;
-}
-.day{
-    color: #212121;
-    flex: 1 1;
-    font-weight: 600;
-    margin-left: 15px;
-}
-.description{
-    flex: 1 1;
-    margin-right: 15px;
-    text-align: right;
-}
-.min-max{
-    color:black;
+.title {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 20px;
 }
 
-.daily-details-grid{
-    grid-row-gap: 0;
-    grid-column-gap:15px ;
-    column-gap: 15px;
-    display: grid;
-    row-gap:0; 
-    flex: 1 1;
-    grid-template-columns: auto auto ;
-    padding: 5px 15px; 
+/* 7 cards in one row */
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
+  overflow-x: auto; /* scroll horizontally if screen is small */
+  padding-bottom: 10px;
 }
-.daily-details-grid-item{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height:30px;
+
+/* Card styling */
+.forecast-card {
+  background-color: rgb(163, 160, 160);
+  border-radius: 10px;
+  padding: 15px;
+  color: #212121;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 320px; /* taller cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
 }
-.daily-details-grid-item label:first-child{
-    color: bisque;
+
+.forecast-card:hover {
+  transform: scale(1.05);
 }
-.daily-details-grid-item label:last-child{
-    color:white;
+
+/* Header section: icon + day + description */
+.forecast-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-small {
+  width: 50px;
+  height: 50px;
+}
+
+.day {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.description {
+  font-size: 14px;
+  color: #333;
+}
+
+.min-max {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* One property per line */
+.daily-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.daily-details-grid-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.daily-details-grid-item label:first-child {
+  color: blue;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.daily-details-grid-item label:last-child {
+  color: red;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Scrollbar styling for horizontal scroll */
+.forecast-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.forecast-grid::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.forecast-grid::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.cards{
+    margin:auto;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.clear-sky-card {
+  background-color: #d6f0ff; /* pastel sky blue */
+}
+
+.sunny-card {
+  background-color: #fff3b0; /* soft warm yellow */
+}
+
+.cloudy-card {
+   background-color: #cfcfcf; /* gentle light grey */
+}
+
+.rainy-card {
+  background-color: #cde7ff; /* muted rainy blue */
+}
+.forecast-card {
+  transition: background-color 0.4s ease;
 }

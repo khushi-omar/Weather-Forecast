@@ -7,8 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /*background-color: rgb(14, 182, 224);*/
   /*background-image: url(components/bb.avif);*/
-  background-image: url(components/background.jpg);
-  background-size:contain;
+  background-image: url(components/bck3.jpg);
+  background-size:cover;
 }
 
 code {
